@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { cn } from "@/lib/cn";
+import Nav from "@/components/nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +34,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="max-w-3xl container mx-auto py-4 md:py-8 px-6">
+            <Nav />
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
