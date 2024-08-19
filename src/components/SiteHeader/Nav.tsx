@@ -9,7 +9,7 @@ const Nav = () => {
     <header className="w-full">
       <nav className="flex items-center justify-between">
         <Link href="/" className="font-bold">
-          Tai Hong
+          {siteConfig.siteTitle}
         </Link>
         <div className="flex gap-4">
           <NavLink href="/blog">Blog</NavLink>
@@ -17,13 +17,13 @@ const Nav = () => {
         </div>
         <div className="items-center gap-2 hidden md:flex">
           <Button variant="ghost" size="icon" className="size-7" asChild>
-            <Link href="https://github.com" target="_blank" rel="noreferrer">
+            <Link href={siteConfig.githubLink} target="_blank" rel="noreferrer">
               <IconGithubLogo className="size-5" />
               <span className="sr-only">GitHub</span>
             </Link>
           </Button>
           <Button variant="ghost" size="icon" className="size-7">
-            <Link href="https://x.com" target="_blank" rel="noreferrer">
+            <Link href={siteConfig.xLink} target="_blank" rel="noreferrer">
               <IconBrandX className="size-5 fill-current" />
               <span className="sr-only">X</span>
             </Link>
