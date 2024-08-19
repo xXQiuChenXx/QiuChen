@@ -28,13 +28,13 @@ export function NavLink({
         ref={linkRef}
         href={href}
         className={cn(
-          "relative text-neutral-400 transition-colors hover:text-neutral-200 ",
-          active && "text-neutral-50"
+          "relative dark:text-neutral-400 text-slate-700 transition-colors dark:hover:text-neutral-200 hover:text-slate-900",
+          active && "dark:text-neutral-50"
         )}
       >
         {children}
         <div
-          className="absolute h-0.5 bottom-0 inset-x-0 bg-neutral-200"
+          className="absolute h-0.5 bottom-0 inset-x-0 dark:bg-neutral-200 bg-slate-800"
           style={{
             width: active ? width : 0,
             transition: "width 500ms",
