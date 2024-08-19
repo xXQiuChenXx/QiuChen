@@ -117,6 +117,8 @@ export const CircleIcon = (props: IconProps) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...props}
-    ></svg>
+    >
+      <circle cx="12" cy="12" r="10" />
+    </svg>
   );
 };

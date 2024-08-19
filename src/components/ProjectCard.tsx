@@ -1,29 +1,27 @@
-
-import Link from "next/link"
-// import { StarIcon } from "@radix-ui/react-icons"
-import { formatNumber } from "@/lib/utils"
-import { StarIcon } from "lucide-react"
+import Link from "next/link";
+import { formatNumber } from "@/lib/utils";
+import { StarIcon } from "lucide-react";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import { CircleIcon } from "./Icons";
 
 export type projectSchema = {
-    name: string;
-    description: string;
-    html_url: string;
-    stargazers_count: number;
-    forks_count: number;
-    homepage: string;
-    language: string; // Programming language
+  name: string;
+  description: string;
+  html_url: string;
+  stargazers_count: number;
+  forks_count: number;
+  homepage: string;
+  language: string; // Programming language
 };
 
 interface ProjectCardProps {
-    project: projectSchema;
+  project: projectSchema;
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
@@ -36,7 +34,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         className="flex h-full flex-col transition-colors hover:bg-muted/25"
       >
         <CardHeader className="flex-1">
-          <CardTitle className="line-clamp-1">{project.name}</CardTitle>
+          <CardTitle className="line-clamp-1 text-base">{project.name}</CardTitle>
           <CardDescription className="line-clamp-2">
             {project.description ?? "No description provided"}
           </CardDescription>
@@ -56,5 +54,5 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </CardContent>
       </Link>
     </Card>
-  )
+  );
 }
