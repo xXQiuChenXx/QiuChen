@@ -1,6 +1,12 @@
 import React from "react";
 import { projects, projectTags } from "@/config/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "My proud, high-quality treasures.",
+};
 
 const Projects = () => {
   return (
