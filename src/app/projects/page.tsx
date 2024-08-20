@@ -7,7 +7,7 @@ const Projects = () => {
     <main className="grid items-center pt-6 md:py-8 py-4 gap-12 pb-10 md:pb-12">
       {projectTags.map((tag) => {
         return (
-          <div key={tag.id}>
+          <div key={tag.id} className="flex flex-col gap-2">
             <h1 className="font-semibold text-xl">{tag.name}</h1>
             <p className="text-sm text-neutral-400 mb-2">{tag.description}</p>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
