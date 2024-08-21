@@ -5,6 +5,8 @@ import "./globals.css";
 import { cn } from "@/lib/cn";
 import Nav from "@/components/SiteHeader/Nav";
 import Footer from "@/components/Footer";
+import { GeistMono } from "geist/font/mono"
+import { GeistSans } from "geist/font/sans"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "min-h-screen")}>
+      <body className={cn(GeistMono.variable, GeistSans.variable, "min-h-screen")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
