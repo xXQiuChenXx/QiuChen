@@ -4,8 +4,8 @@ import "./globals.css";
 import { cn } from "@/lib/cn";
 import Nav from "@/components/SiteHeader/Nav";
 import Footer from "@/components/Footer";
-import { GeistMono } from "geist/font/mono"
-import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import NextTopLoader from "nextjs-toploader";
 
 export const metadata: Metadata = {
@@ -28,14 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(GeistMono.variable, GeistSans.variable, "min-h-screen")}>
+      <body
+        className={cn(GeistMono.variable, GeistSans.variable, "min-h-screen")}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <NextTopLoader height={2} color="rgb(156, 163, 175, 0.9)" showSpinner={false}/>
+          <NextTopLoader height={3} color="#6E56CF" showSpinner={false} shadow="0 0 20px #7D66D9, 0 0 15px #7D66D9"/>
           <div className="max-w-3xl container mx-auto py-4 md:py-8 px-6">
             <Nav />
             {children}

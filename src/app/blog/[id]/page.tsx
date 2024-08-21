@@ -71,9 +71,7 @@ export default function Page({ params }: { params: { id: string } }) {
               </pre>
             ),
             h2: ({ className, style: _style, ...props }) => (
-              <h2 className={cn(className, "border-b pb-2")} {...props}>
-                {props.children}
-              </h2>
+              <Heading as={"h2"} className={cn(className, "border-b pb-2")} {...props} />
             ),
           }}
         />
