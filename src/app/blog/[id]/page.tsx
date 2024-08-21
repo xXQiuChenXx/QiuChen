@@ -41,7 +41,7 @@ function Heading({
 }
 
 export default function Page({ params }: { params: { id: string } }) {
-  const document = documents.find((d) => d.id === params.id);
+  const document = documents.find((d) => d.id === decodeURI(params.id));
   if (!document) notFound();
 
   return (
@@ -83,12 +83,12 @@ export default function Page({ params }: { params: { id: string } }) {
 
 export function generateStaticParams() {
   return documents.map((d) => ({
-    id: d.id,
+    id: encodeURI(d.id),
   }));
 }
 
 export function generateMetadata({ params }: { params: { id: string } }) {
-  const document = documents.find((d) => d.id === params.id);
+  const document = documents.find((d) => d.id === decodeURI(params.id));
   if (!document) notFound();
 
   return {
