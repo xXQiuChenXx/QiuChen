@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 
 export default function Home() {
   return (
-    <main className="grid items-center pt-6 md:py-8 py-4 gap-12 pb-10 md:pb-12">
+    <main className="grid items-center py-5 md:py-14 gap-12 pb-10 md:pb-12">
       blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah
       blah blahblah blah blahblah blah blahblah blah blahblah blah blahF
       <section className="space-y-4">
