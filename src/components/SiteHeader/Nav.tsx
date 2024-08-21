@@ -6,7 +6,7 @@ import { NavLink } from "./NavLink";
 import { siteConfig } from "@/config/site.config";
 const Nav = () => {
   return (
-    <div className="w-full">
+    <header className="w-full">
       <nav className="flex items-center justify-between">
         <Link href="/" className="font-bold">
           {siteConfig.siteTitle}
@@ -31,7 +31,7 @@ const Nav = () => {
           <ThemeToggle />
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

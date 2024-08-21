@@ -35,11 +35,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="max-w-3xl container mx-auto py-4 md:py-8 px-6">
+          <div className="max-w-3xl container mx-auto py-4 md:py-8 px-6">
             <Nav />
             {children}
             <Footer />
-          </header>
+          </div>
         </ThemeProvider>
       </body>
     </html>
