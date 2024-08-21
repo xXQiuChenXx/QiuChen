@@ -24,7 +24,7 @@ const Nav = () => {
           </Button>
           <Button variant="ghost" size="icon" className="size-7">
             <Link href={siteConfig.xLink} target="_blank" rel="noreferrer">
-              <IconBrandX className="size-5 fill-current" />
+              <IconBrandX className="size-5 " />
               <span className="sr-only">X</span>
             </Link>
           </Button>
