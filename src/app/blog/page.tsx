@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 const Blog = () => {
-  console.log(documents);
   return (
     <main className="pt-6 md:py-8 py-4 pb-10 md:pb-12">
       <h1 className="font-semibold text-xl mb-2">Blog</h1>
