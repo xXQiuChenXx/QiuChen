@@ -29,7 +29,7 @@ function Heading({
     return (
       <a href={`#${props.id}`} className="no-underline group">
         <As {...props}>
-          <span className="absolute -ml-4 mt-0.5 text-neutral-500 text-base opacity-0 transition-opacity group-hover:opacity-100">
+          <span className="absolute -ml-4 mt-0.5 dark:text-neutral-500 text-base opacity-0 transition-opacity group-hover:opacity-100">
             #
           </span>
           {props.children}
@@ -46,7 +46,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
   return (
     <div className="pt-6 md:py-8 py-4 gap-12 pb-10 md:pb-12">
-      <article className="prose prose-sm md:prose-base prose-invert text-neutral-400 prose-li:marker:text-neutral-300 max-w-full">
+      <article className="prose prose-sm md:prose-base dark:prose-invert dark:text-neutral-400 dark:prose-li:marker:text-neutral-300 max-w-full">
         <document.renderer
           components={{
             a: MDXLink,
@@ -62,7 +62,7 @@ export default function Page({ params }: { params: { id: string } }) {
             pre: ({ className, style: _style, ...props }) => (
               <pre
                 className={cn(
-                  "text-sm p-2 bg-neutral-900 border border-neutral-800 rounded-lg overflow-auto",
+                  "text-sm p-2 dark:bg-neutral-900 border dark:border-neutral-800 rounded-lg overflow-auto",
                   className
                 )}
                 {...props}
@@ -80,7 +80,7 @@ export default function Page({ params }: { params: { id: string } }) {
       </article>
       <p className="mt-8 text-sm">
         <span className="font-medium mr-1">Last Updated:</span>
-        <ClientDate className="text-neutral-400" value={document.info.date} />
+        <ClientDate className="dark:text-neutral-400" value={document.info.date} />
       </p>
     </div>
   );
