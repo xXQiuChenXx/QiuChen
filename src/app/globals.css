@@ -68,7 +68,6 @@
   }
 }
 
-
 .hover-card {
   --opacity: 0;
   --bg-y: 0%;
@@ -139,3 +138,6 @@
   background-blend-mode: soft-light, hue, hard-light;
 }
 
+pre code {
+  background-color: transparent !important;
+}
