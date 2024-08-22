@@ -82,7 +82,6 @@
   z-index: -1;
   mix-blend-mode: color-dodge;
   opacity: var(--opacity);
-  will-change: background;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) var(--duration);
   transition-property: opacity;
   clip-path: inset(0 0 1px 0 round var(--radius));
@@ -139,3 +138,4 @@
     calc(var(--bg-x) * -1) calc(var(--bg-y) * -1), var(--bg-x) var(--bg-y);
   background-blend-mode: soft-light, hue, hard-light;
 }
+
