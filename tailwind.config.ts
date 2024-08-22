@@ -18,6 +18,14 @@ const config = {
       },
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            "code::before": { content: '""' },
+            "code::after": { content: '""' },
+          },
+        },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
