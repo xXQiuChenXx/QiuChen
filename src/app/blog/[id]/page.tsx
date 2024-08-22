@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ClientDate } from "@/components/ClientDate";
 import { HTMLAttributes, type AnchorHTMLAttributes } from "react";
+import { CodeBlock } from "@/components/MDX/CodeBlock";
 
 function MDXLink({ href, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) {
   if (!href) return <a {...props} />;
@@ -59,26 +60,39 @@ export default function Page({ params }: { params: { id: string } }) {
                 ),
               ])
             ),
-            pre: ({ className, style: _style, ...props }) => (
-              <pre
+            pre: CodeBlock,
+            h2: ({ className, style: _style, ...props }) => (
+              <Heading
+                as={"h2"}
+                className={cn(className, "border-b pb-2")}
+                {...props}
+              />
+            ),
+            span: ({ className, ...props }) => (
+              <span className={cn("text-sm", className)} {...props}>
+                {props.children}
+              </span>
+            ),
+            code: ({ className, style: _style, ...props }) => (
+              <code
                 className={cn(
-                  "text-sm p-2 dark:bg-neutral-900 border dark:border-neutral-800 rounded-lg overflow-auto",
+                  "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
                   className
                 )}
                 {...props}
               >
                 {props.children}
-              </pre>
-            ),
-            h2: ({ className, style: _style, ...props }) => (
-              <Heading as={"h2"} className={cn(className, "border-b pb-2")} {...props} />
+              </code>
             ),
           }}
         />
       </article>
       <p className="mt-8 text-sm">
         <span className="font-medium mr-1">Last Updated:</span>
-        <ClientDate className="dark:text-neutral-400" value={document.info.date} />
+        <ClientDate
+          className="dark:text-neutral-400"
+          value={document.info.date}
+        />
       </p>
     </div>
   );
