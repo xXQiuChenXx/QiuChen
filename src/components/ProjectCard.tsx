@@ -11,7 +11,6 @@ import {
 import { CircleIcon } from "./Icons";
 import { projectSchema } from "@/config/projects";
 
-
 interface ProjectCardProps {
   project: projectSchema;
 }
@@ -20,14 +19,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="rounded-none">
       <Link
-        href={project.html_url}
+        href={project.homepage ?? project.html_url}
         target="_blank"
         rel="noopener noreferrer"
         className="flex h-full flex-col transition-colors hover:bg-muted/25"
       >
-        <CardHeader className="flex-1">
-          <CardTitle className="line-clamp-1 text-base">{project.name}</CardTitle>
-          <CardDescription className="line-clamp-2">
+        <CardHeader className="flex-1 space-y-2.5 pb-5">
+          <CardTitle className="line-clamp-1">{project.name}</CardTitle>
+          <CardDescription className="line-clamp-2 text-sm leading-normal">
             {project.description ?? "No description provided"}
           </CardDescription>
         </CardHeader>

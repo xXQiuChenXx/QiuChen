@@ -59,7 +59,7 @@ export const projects: projectSchema[] = [
     stargazers_count: 0,
   },
   {
-    name: "UTS Libruary System",
+    name: "UTS Library System",
     description:
       "Collage library system. For basic understanding of MVC concept and HTML only.",
     html_url: "https://github.com/xXQiuChenXx/UTS-LIBRARY-SYSTEM",
