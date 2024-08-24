@@ -9,16 +9,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CircleIcon } from "./Icons";
+import { projectSchema } from "@/config/projects";
 
-export type projectSchema = {
-  name: string;
-  description: string;
-  html_url: string;
-  stargazers_count: number;
-  forks_count: number;
-  homepage: string;
-  language: string; // Programming language
-};
 
 interface ProjectCardProps {
   project: projectSchema;
