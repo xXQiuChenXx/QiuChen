@@ -2,9 +2,9 @@ import React from "react";
 import { projects, projectTags } from "@/config/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Metadata } from "next";
-import { createMeatadata } from "@/lib/metadata";
+import { createMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createMeatadata({
+export const metadata: Metadata = createMetadata({
   title: "Projects",
   description: "My proud, high-quality treasures.",
 });

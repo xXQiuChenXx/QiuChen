@@ -1,7 +1,13 @@
 import Link from "next/link";
-import { Suspense } from "react";
 import { siteConfig } from "@/config/site.config";
 import { ProjectCard } from "@/components/ProjectCard";
+import { Metadata } from "next";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createMetadata({
+  title: "Home",
+  description: "Tai Hong, an open sourcer from Malaysia.",
+});
 
 export default function Home() {
   return (
@@ -32,7 +38,7 @@ export default function Home() {
   );
 }
 
-async function Projects() {
+ function Projects() {
   return (
     <>
       {siteConfig.projects?.length ? (

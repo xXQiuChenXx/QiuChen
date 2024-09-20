@@ -1,17 +1,17 @@
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site.config";
 
-export const createMeatadata = ({
+export const createMetadata = ({
   twitter,
   openGraph,
   ...override
 }: Metadata): Metadata => {
+  console.log(override.title)
   return {
-    ...override,
     metadataBase: new URL(siteConfig.siteURL),
     title: {
       default: siteConfig.siteTitle,
-      template: `%s - ${siteConfig.siteTitle}`,
+      template: `${siteConfig.siteTitle} | %s`,
     },
     keywords: [
       "nextjs",
@@ -51,5 +51,6 @@ export const createMeatadata = ({
       icon: "/favicon.ico",
     },
     manifest: `${siteConfig.siteURL}/site.webmanifest`,
+    ...override,
   };
 };
