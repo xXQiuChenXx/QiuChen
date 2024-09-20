@@ -4,10 +4,6 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Metadata } from "next";
 import { createMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createMetadata({
-  title: "Home",
-  description: "Tai Hong, an open sourcer from Malaysia.",
-});
 
 export default function Home() {
   return (
