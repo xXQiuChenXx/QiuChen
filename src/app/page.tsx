@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site.config";
 import { ProjectCard } from "@/components/ProjectCard";
-import { Metadata } from "next";
-import { createMetadata } from "@/lib/metadata";
-
 
 export default function Home() {
   return (

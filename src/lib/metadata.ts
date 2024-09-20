@@ -6,7 +6,6 @@ export const createMetadata = ({
   openGraph,
   ...override
 }: Metadata): Metadata => {
-  console.log(override.title)
   return {
     metadataBase: new URL(siteConfig.siteURL),
     title: {
