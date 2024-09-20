@@ -38,10 +38,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
             />
             {project.language ?? "Unknown"}
           </div>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <StarIcon className="mr-1 size-3" aria-hidden="true" />
             {formatNumber(project.stargazers_count)}
-          </div>
+          </div> */}
         </CardContent>
       </Link>
     </Card>
