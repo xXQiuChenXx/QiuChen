@@ -36,6 +36,7 @@ export const createMeatadata = ({
       title: override.title as string,
       description: override.description as string,
       siteName: siteConfig.siteTitle,
+      // images: [siteConfig.ogImage],
       ...openGraph,
     },
     twitter: {

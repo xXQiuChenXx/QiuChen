@@ -1,12 +1,13 @@
 import { BlogCard } from "@/components/BlogCard";
 import { documents } from "@/lib/documents";
+import { createMeatadata } from "@/lib/metadata";
 import { Metadata } from "next";
 import React from "react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMeatadata({
   title: "Blog",
   description: "My precious thoughts and inspirations.",
-};
+});
 
 const Blog = () => {
   return (

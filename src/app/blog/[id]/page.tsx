@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ClientDate } from "@/components/ClientDate";
 import { HTMLAttributes, type AnchorHTMLAttributes } from "react";
 import { CodeBlock } from "@/components/MDX/CodeBlock";
+import { createMeatadata } from "@/lib/metadata";
 
 function MDXLink({ href, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) {
   if (!href) return <a {...props} />;
@@ -108,13 +109,13 @@ export function generateMetadata({ params }: { params: { id: string } }) {
   const document = documents.find((d) => d.id === decodeURI(params.id));
   if (!document) notFound();
 
-  return {
+  return createMeatadata({
     title: document.info.title,
     description: document.info.description,
     openGraph: {
       type: "article",
-      authors: "Fuma Nama",
+      authors: "Lau Tai Hong",
       modifiedTime: document.info.date.toISOString(),
     },
-  };
+  });
 }
