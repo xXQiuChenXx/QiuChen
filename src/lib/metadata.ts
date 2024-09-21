@@ -34,7 +34,7 @@ export const createMetadata = ({
       url: siteConfig.siteURL,
       title: override.title as string,
       description: override.description as string,
-      siteName: siteConfig.siteTitle,
+      siteName: "Portfolio",
       images: [`${siteConfig.siteURL}/ogImage.png`],
       ...openGraph,
     },
