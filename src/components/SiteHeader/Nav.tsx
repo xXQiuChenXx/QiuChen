@@ -15,7 +15,7 @@ const Nav = () => {
           <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/blog">Blog</NavLink>
         </div>
-        <div className="items-center gap-3 hidden md:flex">
+        <div className="items-center gap-2 hidden md:flex">
           <Button variant="ghost" size="icon" className="size-7" asChild>
             <Link href={siteConfig.githubLink} target="_blank" rel="noreferrer">
               <IconGithubLogo className="size-5" />
