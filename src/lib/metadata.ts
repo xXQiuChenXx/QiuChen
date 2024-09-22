@@ -18,8 +18,10 @@ export const createMetadata = ({
       "blog",
       "react server components",
       "taihong",
+      "lau tai hong",
       "tai hong",
       "tai hong blog",
+      "lau tai hong blog",
     ],
     authors: [
       {
