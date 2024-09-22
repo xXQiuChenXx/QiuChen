@@ -22,9 +22,9 @@ const Nav = () => {
               <span className="sr-only">GitHub</span>
             </Link>
           </Button>
-          <Button variant="ghost" size="icon" className="size-7">
+          <Button variant="ghost" size="icon" className="size-7" asChild>
             <Link href={siteConfig.xLink} target="_blank" rel="noreferrer">
-              <IconBrandX className="size-5 " />
+              <IconBrandX className="size-5" />
               <span className="sr-only">X</span>
             </Link>
           </Button>
