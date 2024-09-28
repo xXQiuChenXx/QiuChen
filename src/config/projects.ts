@@ -35,7 +35,7 @@ export const projectTags: projectTagSchema[] = [
 
 export const projects: projectSchema[] = [
   {
-    name: "Job Web App",
+    name: "Joke Web App",
     description: "A joke application build with ASP.NET Core MVC",
     html_url: "https://github.com/xXQiuChenXx/JokeWebApp",
     tag: "toy",
