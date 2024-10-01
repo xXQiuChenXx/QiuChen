@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(GeistMono.variable, GeistSans.variable, "min-h-screen")}
+        className={cn(GeistMono.variable, GeistSans.variable, "min-h-screen antialiased")}
       >
         <ThemeProvider
           attribute="class"
