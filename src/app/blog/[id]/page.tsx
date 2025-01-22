@@ -42,8 +42,11 @@ function Heading({
   return <As {...props}>{props.children}</As>;
 }
 
-export default function Page({ params }: { params: { id: string } }) {
-  const document = documents.find((d) => d.id === decodeURI(params.id));
+type Params = Promise<{ id: string }>;
+
+export default async function Page({ params }: { params: Params }) {
+  const { id } = await params;
+  const document = documents.find((d) => d.id === decodeURI(id));
   if (!document) notFound();
 
   return (
