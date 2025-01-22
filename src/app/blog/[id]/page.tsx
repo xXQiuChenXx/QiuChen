@@ -108,8 +108,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { id: string } }) {
-  const document = documents.find((d) => d.id === decodeURI(params.id));
+export async function generateMetadata(props: { params: Params }) {
+  const { id } = await props.params;
+  const document = documents.find((d) => d.id === decodeURI(id));
   if (!document) notFound();
 
   return createMetadata({
