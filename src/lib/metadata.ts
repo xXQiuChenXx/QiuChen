@@ -18,7 +18,8 @@ export const createMetadata = ({
       "tai hong",
       "tai hong blog",
       "lau tai hong blog",
-      "nextjs"
+      "nextjs",
+      "lautaihong"
     ],
     authors: [
       {
