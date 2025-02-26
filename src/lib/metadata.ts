@@ -13,15 +13,12 @@ export const createMetadata = ({
       template: `${siteConfig.siteTitle} | %s`,
     },
     keywords: [
-      "nextjs",
-      "react",
-      "blog",
-      "react server components",
-      "taihong",
       "lau tai hong",
+      "taihong",
       "tai hong",
       "tai hong blog",
       "lau tai hong blog",
+      "nextjs"
     ],
     authors: [
       {
