@@ -14,8 +14,8 @@ function Heading({
   if (props.id)
     return (
       <a href={`#${props.id}`} className="no-underline group">
-        <As {...props}>
-          <span className="absolute -ml-4 mt-0.5 dark:text-neutral-500 text-base opacity-0 transition-opacity group-hover:opacity-100">
+        <As {...props} className="leading-normal" style={{ lineHeight: 1.3 }}>
+          <span className="absolute -ml-4 mt-0.5 dark:text-neutral-500 text-base opacity-0 transition-opacity group-hover:opacity-100 ">
             #
           </span>
           {props.children}
@@ -28,6 +28,16 @@ function Heading({
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
+    p: (props) => (
+      <p className="text-justify leading-relaxed" {...props}>
+        {props.children}
+      </p>
+    ),
+    li: (props) => (
+      <li className="text-justify" {...props}>
+        {props.children}
+      </li>
+    ),
     a: ({ href, ...props }) => {
       if (!href) return <a {...props} />;
 
@@ -64,7 +74,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h2: ({ className, style: _style, ...props }) => (
       <Heading
         as={"h2"}
-        className={cn(className, "border-b pb-2")}
+        className={cn(className, "border-b pb-2 ")}
         {...props}
       />
     ),

@@ -28,7 +28,7 @@ export function BlogCard({
     >
       <div className="flex-1">
         <div className="flex flex-row gap-2 justify-between">
-          <h2 className="text-sm font-semibold mb-2">{info.title}</h2>
+          <h2 className="text-sm font-semibold mb-2 line-clamp-1">{info.title}</h2>
           <span className="text-xs text-neutral-400 text-nowrap">{date}</span>
         </div>
         <p className="text-sm text-muted-foreground dark:text-neutral-400">
