@@ -1,5 +1,6 @@
 import { BlogCard } from "@/components/BlogCard";
-import { documents } from "@/lib/documents";
+import { mdxImports } from "@/config/posts";
+import { getAllMdxFiles } from "@/lib/documents";
 import { createMetadata } from "@/lib/metadata";
 import { Metadata } from "next";
 import React from "react";
@@ -9,7 +10,9 @@ export const metadata: Metadata = createMetadata({
   description: "My precious thoughts and inspirations.",
 });
 
-const Blog = () => {
+const Blog = async () => {
+  const posts = await getAllMdxFiles();
+
   return (
     <main className="pt-6 md:py-8 py-4 pb-10 md:pb-12">
       <h1 className="font-semibold text-xl mb-2">Blog</h1>
@@ -18,9 +21,13 @@ const Blog = () => {
       </p>
 
       <div className="flex flex-col gap-3">
-        {documents.map((d) => (
-          <BlogCard key={d.id} id={d.id} info={d.info} />
-        ))}
+        {posts.map(async (id) => {
+          // @ts-ignore
+          const { frontmatter } = await mdxImports[
+            id as keyof typeof mdxImports
+          ]();
+          return <BlogCard key={id} id={id} info={frontmatter} />;
+        })}
       </div>
     </main>
   );

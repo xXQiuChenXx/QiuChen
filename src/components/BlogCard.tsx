@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { documents } from "@/lib/documents";
 import { useLayoutEffect, useState } from "react";
 
 export function BlogCard({
@@ -8,12 +7,16 @@ export function BlogCard({
   info,
 }: {
   id: string;
-  info: (typeof documents)[number]["info"];
+  info: {
+    title: string;
+    description: string;
+    date: string;
+  };
 }) {
   const [date, setDate] = useState("");
 
   useLayoutEffect(() => {
-    setDate(info.date.toLocaleDateString(undefined, { dateStyle: "medium" }));
+    setDate((new Date(info.date)).toLocaleDateString(undefined, { dateStyle: "medium" }));
   }, [info.date]);
 
   return (

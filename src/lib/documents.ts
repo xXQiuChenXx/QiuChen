@@ -1,11 +1,15 @@
-import entry from "content";
-import { document } from "fuma-content";
-import * as path from "node:path";
+import { promises as fs } from "fs";
+import path from "path";
 
-export const documents = document(entry)
-  .map((d) => ({
-    id: path.basename(d.file, path.extname(d.file)),
-    ...d,
-    info: d.info as { title: string; description: string; date: Date },
-  }))
-  .sort((a, b) => b.info.date.getTime() - a.info.date.getTime());
+// Function to get all MDX files from the content directory
+export async function getAllMdxFiles() {
+  const contentDirectory = path.join(process.cwd(), "content");
+  const filenames = await fs.readdir(contentDirectory);
+
+  // Filter only MDX files
+  const mdxFiles = filenames.filter(
+    (filename) => filename.endsWith(".mdx") || filename.endsWith(".md")
+  );
+
+  return mdxFiles.map((filename) => filename.replace(/\.mdx?$/, ""));
+}

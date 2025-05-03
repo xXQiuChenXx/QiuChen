@@ -15,7 +15,6 @@ export function CodeBlock({
 }: React.HTMLProps<HTMLPreElement>) {
   const ref = useRef<HTMLDivElement>(null);
   const [isCopied, setIsCopied] = useState(false);
-  
 
   return (
     <pre
