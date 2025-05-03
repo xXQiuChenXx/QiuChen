@@ -35,6 +35,20 @@ export const projectTags: projectTagSchema[] = [
 
 export const projects: projectSchema[] = [
   {
+    name: "AI Job Career Fronted",
+    description: "A job career website for employer and job seeker",
+    html_url: "https://github.com/xXQiuChenXx/AIJobCareerBackend",
+    tag: "project",
+    language: "C#",
+  },
+  {
+    name: "AI Job Career Backend",
+    description: "A job career website for employer and job seeker",
+    html_url: "https://github.com/xXQiuChenXx/AIJobCareerFrontend",
+    tag: "project",
+    language: "React router",
+  },
+  {
     name: "Joke Web App",
     description: "A joke application build with ASP.NET Core MVC",
     html_url: "https://github.com/xXQiuChenXx/JokeWebApp",
@@ -43,7 +57,8 @@ export const projects: projectSchema[] = [
   },
   {
     name: "Space Drive",
-    description: "Personal OneDrive file listing web application with many additional features",
+    description:
+      "Personal OneDrive file listing web application with many additional features",
     html_url: "https://github.com/xXQiuChenXx/spacedrive",
     language: "Typescript",
     tag: "project",
