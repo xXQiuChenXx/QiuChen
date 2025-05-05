@@ -31,7 +31,7 @@
     "remark-gfm": "^4.0.1",
     "remark-heading-id": "^1.0.1",
     "remark-mdx-frontmatter": "^5.1.0",
-    "tailwind-merge": "^2.6.0",
+    "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
