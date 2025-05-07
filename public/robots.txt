@@ -1,0 +1,17 @@
+# Allow all friendly crawlers full access
+User-agent: *
+Allow: /
+
+# Disallow access to specific areas if needed (examples)
+# User-agent: *
+# Disallow: /admin/      # Example: If you had an admin section
+# Disallow: /drafts/     # Example: If you stored drafts publicly but wanted to block indexing
+# Disallow: /api/        # Example: If you don't want API routes indexed
+
+# Specific rules for Googlebot (optional)
+User-agent: Googlebot
+Allow: /             # Explicitly allow Googlebot everywhere (usually covered by *)
+
+
+# Point crawlers to your sitemap(s)
+Sitemap:https://taihong.myitscm.com/sitemap.xml
