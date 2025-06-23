@@ -6,6 +6,7 @@ import Nav from "@/components/SiteHeader/Nav";
 import Footer from "@/components/Footer";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import { Analytics } from "@vercel/analytics/next"
 
 import NextTopLoader from "nextjs-toploader";
 import { createMetadata } from "@/lib/metadata";
@@ -45,6 +46,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
