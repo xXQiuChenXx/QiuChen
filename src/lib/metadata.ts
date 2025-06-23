@@ -24,10 +24,10 @@ export const createMetadata = ({
     authors: [
       {
         name: "taihong",
-        url: "https://taihong.myitscm.com",
+        url: "https://tai-hong.myitscm.com",
       },
     ],
-    creator: "taihong",
+    creator: "Lau Tai Hong",
     openGraph: {
       type: "website",
       locale: "en_US",

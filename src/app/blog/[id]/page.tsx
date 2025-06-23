@@ -41,7 +41,7 @@ export default async function Page({
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://taihong.myitscm.com/blog/${id}`
+              "@id": `https://tai-hong.myitscm.com/blog/${id}`
             }
           })
         }}
