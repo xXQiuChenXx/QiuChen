@@ -26,6 +26,26 @@ export default async function Page({
           value={new Date(frontmatter.date)}
         />
       </p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": frontmatter.title,
+            "description": frontmatter.description,
+            "datePublished": frontmatter.date,
+            "author": {
+              "@type": "Person",
+              "name": "Lau Tai Hong"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://taihong.myitscm.com/blog/${id}`
+            }
+          })
+        }}
+      />
     </div>
   );
 }
