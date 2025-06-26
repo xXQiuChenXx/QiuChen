@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site.config";
 export const createMetadata = ({
   twitter,
   openGraph,
+  alternates,
   ...override
 }: Metadata): Metadata => {
   return {
@@ -28,6 +29,10 @@ export const createMetadata = ({
       },
     ],
     creator: "Lau Tai Hong",
+    alternates: {
+      ...alternates,
+      canonical: openGraph?.url || siteConfig.siteURL,
+    },
     openGraph: {
       type: "website",
       locale: "en_US",
