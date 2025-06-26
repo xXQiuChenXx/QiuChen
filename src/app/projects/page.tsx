@@ -7,6 +7,9 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Projects",
   description: "My proud, high-quality treasures.",
+  openGraph: {
+    url: "https://tai-hong.myitscm.com/projects",
+  },
 });
 
 const Projects = () => {
