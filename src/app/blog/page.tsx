@@ -9,7 +9,7 @@ export const metadata: Metadata = createMetadata({
   title: "Blog",
   description: "My precious thoughts and inspirations.",
   openGraph: {
-    url: "https://tai-hong.myitscm.com/blog",
+    url: "https://taihong.myitscm.com/blog",
   }
 });
 

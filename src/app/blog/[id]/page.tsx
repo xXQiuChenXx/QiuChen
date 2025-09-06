@@ -41,7 +41,7 @@ export default async function Page({
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://tai-hong.myitscm.com/blog/${id}`
+              "@id": `https://taihong.myitscm.com/blog/${id}`
             }
           })
         }}
@@ -75,7 +75,7 @@ export async function generateMetadata(props: {
     openGraph: {
       type: "article",
       authors: "Lau Tai Hong",
-      url: `https://tai-hong.myitscm.com/blog/${id}`,
+      url: `https://taihong.myitscm.com/blog/${id}`,
       modifiedTime: new Date(frontmatter.date).toISOString(),
     },
   });

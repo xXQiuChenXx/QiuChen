@@ -25,7 +25,7 @@ export const createMetadata = ({
     authors: [
       {
         name: "taihong",
-        url: "https://tai-hong.myitscm.com",
+        url: "https://taihong.myitscm.com",
       },
     ],
     creator: "Lau Tai Hong",
