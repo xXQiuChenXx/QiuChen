@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         return {
           url: getUrl(`/blog/${post}`),
           lastModified: new Date(frontmatter.date),
-          changeFrequency: "weekly" as const,
+          changeFrequency: "monthly" as const,
           priority: 0.5,
         };
       })
