@@ -55,7 +55,7 @@ export async function generateMetadata(props: {
     openGraph: {
       type: "article",
       authors: "Lau Tai Hong",
-      url: `https://taihong.myitscm.com/blog/${id}`,
+      url: `https://myblog.myitscm.com/blog/${id}`,
       modifiedTime: new Date(frontmatter.date).toISOString(),
     },
   });

@@ -14,4 +14,4 @@ Allow: /             # Explicitly allow Googlebot everywhere (usually covered by
 
 
 # Point crawlers to your sitemap(s)
-Sitemap:https://taihong.myitscm.com/sitemap.xml
+Sitemap:https://myblog.myitscm.com/sitemap.xml
